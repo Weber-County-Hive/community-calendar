@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wasatch County Calendar — Community Calendar</title>
+<meta name="description" content="Election dates, deadlines and public hearings for Wasatch County, plus statewide dates.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpolygon points='60,8 105,34 105,86 60,112 15,86 15,34' fill='%2312304a' stroke='%239FD8C4' stroke-width='8'/%3E%3Crect x='38' y='42' width='44' height='38' fill='%23fff'/%3E%3Crect x='38' y='42' width='44' height='10' fill='%231d6b57'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<div class="topbar"><span>Community Calendar · The Weber County Hive + Utah Hive Politics</span><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a></div>
+<div class="band"><header class="masthead"><div class="crumb"><a href="index.html">← All calendars</a></div><div class="mhead"><svg class="mark" viewBox="0 0 120 120" aria-hidden="true"><polygon points="60,4 108.5,32 108.5,88 60,116 11.5,88 11.5,32" fill="none" stroke="#9FD8C4" stroke-opacity=".5" stroke-width="1.5"/><polygon points="60,16 98,38 98,82 60,104 22,82 22,38" fill="#0b1d2c" stroke="#9FD8C4" stroke-width="3"/><rect x="36" y="40" width="48" height="42" fill="#fff"/><rect x="36" y="40" width="48" height="11" fill="#1d6b57"/><rect x="44" y="35" width="4" height="10" fill="#9FD8C4"/><rect x="72" y="35" width="4" height="10" fill="#9FD8C4"/><polygon points="60,57 67,61 67,69 60,73 53,69 53,61" fill="#D9B868" stroke="#12304a" stroke-width="1.5"/></svg><div>
+  <div class="eyebrow">Wasatch County · Politics and government</div>
+  <h1 class="title">Wasatch County Calendar</h1></div></div>
+  <p class="dek">Election dates, deadlines and public hearings for Wasatch County, with statewide dates included. Looking for festivals and fundraisers? See <a href="community.html?county=wasatch" style="color:#fff;">Community Events</a>.</p>
+  <div class="dates">Page published <span data-site="pagePublished"></span> · Last updated <span class="upd" data-site="pageUpdated"></span></div>
+</header></div>
+<section><nav class="calnav" id="countynav"></nav><div class="bar"><button data-view="list" class="on">List</button><button data-view="grid">Month</button><label><input type="checkbox" id="statewide" checked> Include statewide dates</label><select id="type" aria-label="Kind of date"><option value="">All kinds</option><option value="election">Elections</option><option value="deadline">Deadlines</option><option value="meeting">Public meetings</option><option value="community">Community events</option><option value="memorial">Memorials</option></select><label><input type="checkbox" id="past"> Show past dates</label><button id="dlall">＋ Save all to my calendar</button></div>
+<div class="count" id="count"></div>
+<div id="events"></div></section>
+<section id="submit"><div class="two">
+  <div class="box dark"><h3>Send us a date</h3><p style="margin:0;">Know of an election date, public hearing or deadline in Wasatch County? Send it in.</p>
+  <a class="email" href="mailto:webercountyhive@gmail.com?subject=Calendar%20Event%20-%20Wasatch%20County">webercountyhive@gmail.com</a>
+  <p style="margin:6px 0 0;font-size:15.5px;">Include the date, time, place and a link if there is one (a Facebook event, a flyer, a city or county notice). We check each date before it goes up, and we may write back to ask if you&rsquo;d like to tell us more.</p></div>
+  <div class="box"><h3>How this calendar works</h3><ul style="margin:0;padding-left:20px;font-size:16.5px;">
+  <li>Every date links to where it came from.</li>
+  <li>Dates from Hive case files link back to the case file.</li>
+  <li>Tap <strong>Add to my calendar</strong> to save a date to your phone, or <strong>Share</strong> to send it to a friend or post it on Facebook.</li>
+  <li>Dates marked <strong>Date not final</strong> may change. Check the source before you go.</li></ul></div>
+</div></section>
+<div class="toast" id="toast"></div>
+<footer class="site-footer"><div class="wrap">
+  <h3>Community Calendar</h3><p style="color:#9FD8C4;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;">From The Weber County Hive and Utah Hive Politics</p>
+  <p>Important dates for Utah voters and neighbors: elections, deadlines, public hearings and community events. Every date links to its source.</p>
+  <p>Send a date: <a href="mailto:webercountyhive@gmail.com?subject=Calendar%20Event">webercountyhive@gmail.com</a></p>
+  <div class="site-links"><a href="index.html">All calendars</a><a href="politics.html">Utah Politics</a><a href="community.html">Community Events</a><a href="weber.html">Weber</a><a href="davis.html">Davis</a><a href="box-elder.html">Box Elder</a><a href="morgan.html">Morgan</a><a href="wasatch.html">Wasatch</a><a href="salt-lake.html">Salt Lake</a><a href="utah-county.html">Utah County</a><a href="tooele.html">Tooele</a></div>
+  <p style="margin-top:6px;">Across the Hive:</p>
+  <div class="site-links"><a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive index</a><a href="https://weber-county-hive.github.io/sunday_buzz/">The Sunday Buzz</a><a href="https://weber-county-hive.github.io/Utah-Hive-News-Spotlights/">News Spotlights</a><a href="https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/">Letters &amp; Essays to the Collective</a><a href="https://weber-county-hive.github.io/candidates2026/">Candidates 2026</a><a href="https://weber-county-hive.github.io/Voter-Quick-Scan-2026/">Voter Quick Scan</a><a href="https://webercountyhive-coder.github.io/referendum/">Referendums</a><a href="https://weber-county-hive.github.io/utah-maps/">Utah Maps</a><a href="https://weber-county-hive.github.io/Transparency/">Transparency</a><a href="https://weber-county-hive.github.io/Bill-Tracker/">Bill Tracker</a><a href="https://weber-county-hive.github.io/pac/">PACs</a></div>
+</div></footer>
+<script src="events-data.js?v=1"></script>
+<script>window.CAL_MODE="county";window.CAL_COUNTY="wasatch";window.CAL_FILE="wasatch-calendar";</script>
+<script src="calendar.js?v=1"></script>
+</body>
+</html>
