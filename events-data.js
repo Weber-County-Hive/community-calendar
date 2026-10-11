@@ -31,7 +31,7 @@
 const SITE = {
   name: "Community Calendar",
   pagePublished: "Oct 4, 2026",
-  pageUpdated: "Oct 9, 2026",
+  pageUpdated: "Oct 10, 2026",
   email: "webercountyhive@gmail.com",
   url: "https://weber-county-hive.github.io/Community-Calendar/"
 };
@@ -55,6 +55,8 @@ const EVENTS = [
   { id:"fec-q3-reports-2026", cal:"politics", county:"statewide", type:"deadline", title:"Federal campaign reports due (through Sept. 30)", date:"2026-10-15", endDate:"", start:"", end:"", place:"", desc:"Quarterly reports for U.S. House and Senate campaigns, covering money through Sept. 30, are due. The Hive will update the UT-2 case file with them.", link:"https://www.fec.gov", linkLabel:"fec.gov", repo:"Candidates 2026", caseFile:"https://weber-county-hive.github.io/candidates2026/ut2-moore-crosby.html", from:"hive", tentative:false, added:"2026-10-04" },
   { id:"registration-deadline-2026", cal:"politics", county:"statewide", type:"deadline", title:"Regular voter registration deadline", date:"2026-10-23", endDate:"", start:"17:00", end:"", place:"", desc:"Last day for regular voter registration, 5 p.m. Same-day registration is available on Election Day with two forms of valid ID.", link:"https://vote.utah.gov", linkLabel:"vote.utah.gov", repo:"", caseFile:"", from:"hive", tentative:false, added:"2026-10-04" },
   { id:"election-day-2026", cal:"politics", county:"statewide", type:"election", title:"General Election Day", date:"2026-11-03", endDate:"", start:"07:00", end:"20:00", place:"Your county's vote centers", desc:"Polls and vote centers are open 7 a.m. to 8 p.m. Drop boxes close at 8 p.m.", link:"https://vote.utah.gov", linkLabel:"vote.utah.gov", repo:"Voter Quick Scan 2026", caseFile:"https://weber-county-hive.github.io/Voter-Quick-Scan-2026/", from:"hive", tentative:false, added:"2026-10-04" },
+
+  { id:"crosby-press-conference-2026-10-14", cal:"politics", county:"statewide", type:"campaign", title:"Campaign press conference: Peter Crosby (D, UT-2)", date:"2026-10-14", endDate:"", start:"10:00", end:"11:00", place:"Utah State Capitol, South Steps, 350 N State St, Salt Lake City", desc:"Per the Crosby campaign's Oct. 10 media advisory: Crosby, Utah Democratic Party Chair Brian King and two Northern Utah constituents will speak on affordability, government integrity, the Great Salt Lake and public lands. The Hive lists public campaign events from any candidate in the race.", link:"https://www.petercrosbyforcongress.org/", linkLabel:"Crosby campaign (media advisory)", repo:"Candidates 2026", caseFile:"https://weber-county-hive.github.io/candidates2026/ut2-moore-crosby.html", from:"hive", tentative:false, added:"2026-10-10" },
 
   // ===== POLITICS · Weber County =====
   { id:"powder-mountain-e6863-protest", cal:"politics", county:"weber", type:"deadline", title:"Protest deadline: Powder Mountain water application E6863", date:"2026-10-07", endDate:"", start:"", end:"", place:"", desc:"Last day to file a protest on Powder Mountain's application for nine wells and 1,000 acre-feet of water.", link:"https://weber-county-hive.github.io/Transparency/weber-hive-powder-mountain-water.html", linkLabel:"Wells at the Top", repo:"Transparency", caseFile:"https://weber-county-hive.github.io/Transparency/weber-hive-powder-mountain-water.html", from:"hive", tentative:false, added:"2026-10-04" },

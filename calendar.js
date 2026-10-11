@@ -5,7 +5,7 @@ const COUNTY = window.CAL_COUNTY || '';
 const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
 const MS=['Jan.','Feb.','March','April','May','June','July','Aug.','Sept.','Oct.','Nov.','Dec.'];
 const WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-const TYPES={election:'Election',deadline:'Deadline',meeting:'Public meeting',community:'Community event',memorial:'Memorial'};
+const TYPES={election:'Election',deadline:'Deadline',meeting:'Public meeting',community:'Community event',memorial:'Memorial',campaign:'Campaign event'};
 const $=s=>document.querySelector(s);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const pd=s=>{const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d);};

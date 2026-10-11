@@ -39,7 +39,7 @@ section h2{font-size:28px;margin-bottom:10px;color:var(--navy);}
 .month{margin-top:22px;}
 .month h3{font-size:22px;color:var(--green);border-bottom:3px solid var(--green);padding-bottom:4px;margin-bottom:10px;}
 .ev{display:flex;gap:16px;border:1px solid var(--line);border-left:6px solid var(--blue);background:#fff;padding:16px 18px;margin:10px 0;scroll-margin-top:20px;}
-.ev.t-election{border-left-color:var(--navy);} .ev.t-deadline{border-left-color:#B5462F;} .ev.t-meeting{border-left-color:var(--sea);} .ev.t-community{border-left-color:var(--green);} .ev.t-memorial{border-left-color:#6B5A8E;}
+.ev.t-election{border-left-color:var(--navy);} .ev.t-deadline{border-left-color:#B5462F;} .ev.t-meeting{border-left-color:var(--sea);} .ev.t-community{border-left-color:var(--green);} .ev.t-memorial{border-left-color:#6B5A8E;} .ev.t-campaign{border-left-color:#1F5F99;}
 .ev:target{box-shadow:0 0 0 4px var(--gold);}
 .day{flex:none;width:66px;text-align:center;background:var(--sky);padding:8px 4px;align-self:flex-start;}
 .day .m{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);}
