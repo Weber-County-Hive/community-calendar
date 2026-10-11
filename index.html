@@ -3,45 +3,183 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Community Calendar — The Weber County Hive</title>
-<meta name="description" content="Important dates for Utah voters and neighbors: elections, deadlines, hearings and community events, each linked to its source.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpolygon points='60,8 105,34 105,86 60,112 15,86 15,34' fill='%2312304a' stroke='%239FD8C4' stroke-width='8'/%3E%3Crect x='38' y='42' width='44' height='38' fill='%23fff'/%3E%3Crect x='38' y='42' width='44' height='10' fill='%231d6b57'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1">
+<title>The Sunday Buzz — Utah Hive Politics</title>
+<meta name="description" content="The Sunday Buzz: the weekly recap from Utah Hive Politics and The Weber County Hive. Every story and case file from the week, linked to its source.">
+<meta property="og:title" content="The Sunday Buzz — Utah Hive Politics">
+<meta property="og:description" content="The Sunday Buzz: the weekly recap from Utah Hive Politics and The Weber County Hive. Every story and case file from the week, linked to its source.">
+<meta property="og:image" content="https://weber-county-hive.github.io/sunday_buzz/social-preview-sunday-buzz.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="sunday-buzz-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Cormorant+Garamond:ital,wght@1,600&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5EFE2;--card:#FFFDF8;--void:#0D0B0A;--gold:#D4AF37;--gold-ink:#8A6A12;--ink:#1E1914;--soft:#51463A;--line:#D9CDB4;--max:860px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;font-size:17px;line-height:1.62}
+a{color:var(--gold-ink);text-underline-offset:2px}a:hover{color:var(--ink)}
+h1,h2,h3{font-family:'Cinzel',serif;font-weight:700;margin:0}
+.topbar{background:var(--void);color:#E9DFC2;padding:10px 24px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.topbar a{color:#E9DFC2;text-decoration:none}.topbar a:hover{color:var(--gold)}
+.topbar .brand{display:flex;align-items:center;gap:9px}.topbar img{width:22px;height:22px}
+header.masthead{background:var(--void);color:#F4EBD0;border-bottom:4px solid var(--gold)}
+.mh{max-width:var(--max);margin:0 auto;padding:46px 24px 38px;display:flex;gap:28px;align-items:center}
+.mh img{width:150px;height:150px;flex:none}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+h1.title{font-size:clamp(34px,6vw,58px);line-height:1.02;color:#F0D272;margin:10px 0 8px;font-weight:900}
+.dek{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:23px;color:#F4EBD0;margin:0}
+.dates{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#CDBF9C;margin-top:12px}
+main{max-width:var(--max);margin:0 auto;padding:10px 24px 0}
+.intro{font-size:18px;color:var(--soft);margin:26px 0 6px}
+section.blk{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);padding:18px 22px 10px;margin:18px 0}
+section.blk h2{font-size:22px;margin-bottom:8px}
+section.blk ul{padding-left:20px;margin:8px 0 12px}section.blk li{margin:5px 0}
+section.blk p{margin:8px 0 12px}
+.issues{display:grid;gap:16px;margin:24px 0}
+.issue{display:flex;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);padding:18px 20px;text-decoration:none;color:var(--ink)}
+.issue:hover{box-shadow:0 8px 24px rgba(13,11,10,.12)}
+.issue .num{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:var(--gold-ink);text-transform:uppercase}
+.issue h3{font-size:21px;margin:4px 0}
+.issue p{margin:0;color:var(--soft);font-size:15.5px}
+.issue img{width:74px;height:74px;flex:none}
+.box{background:var(--card);border:1px solid var(--line);padding:16px 20px;margin:18px 0;font-size:16px}
+.box b{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--gold-ink);display:block;text-transform:uppercase;margin-bottom:4px}
+.back{display:inline-block;margin:26px 0 0;font-family:'IBM Plex Mono',monospace;font-size:13px}
+footer{background:var(--void);color:#CDBF9C;margin-top:56px;padding:34px 24px 44px}
+footer .w{max-width:var(--max);margin:0 auto;display:flex;flex-direction:column;gap:10px}
+footer h3{color:#F0D272;font-size:18px}footer p{margin:0;font-size:14px}
+footer a{color:var(--gold);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:12.5px}footer a:hover{color:#fff}
+@media(max-width:640px){.mh{flex-direction:column;align-items:flex-start;padding:34px 18px 28px;gap:16px}.mh img{width:96px;height:96px}main{padding:6px 16px 0}section.blk{padding:16px 16px 8px}.issue img{display:none}}
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:1px 7px;border-radius:3px;margin-right:4px;vertical-align:1px;white-space:nowrap}.tag.new{background:var(--gold);color:var(--void)}.tag.up{background:#1f3a5a;color:#fff}.tag.fix{background:#e6e1d4;color:#3a3328;border:1px solid #c9bfa8}
+.week{margin:34px 0 10px}
+.week>.issue{border-left-width:6px}
+.week .intro{margin:16px 0 4px}
+.week-body{padding-left:0}
+.weeknote{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--soft);margin:10px 0 0}
+details.older{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--line);margin:14px 0}
+details.older>summary{list-style:none;cursor:pointer;padding:16px 20px;display:flex;gap:16px;align-items:center}
+details.older>summary::-webkit-details-marker{display:none}
+details.older>summary .chev{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--gold-ink);white-space:nowrap}
+details.older[open]>summary .chev .o{display:none}details.older:not([open])>summary .chev .c{display:none}
+details.older>summary img{width:54px;height:54px;flex:none}
+details.older .week-body{padding:0 18px 12px}
+.older-h{margin-top:46px;font-size:24px}
+@media(max-width:640px){details.older>summary img{display:none}details.older .week-body{padding:0 10px 8px}}
+.ilabel{display:inline-block;background:var(--void);color:#F0D272;font-family:'Cinzel',serif;font-weight:900;font-size:17px;letter-spacing:.08em;padding:7px 16px 6px;border-left:5px solid var(--gold);margin:0 0 -1px}
+.ilabel small{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:12px;letter-spacing:.1em;color:#CDBF9C;margin-left:10px}
+.week{margin:40px 0 10px}
+.searchbox{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);padding:16px 18px;margin:18px 0}
+.searchbox label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--gold-ink);text-transform:uppercase;display:block;margin-bottom:6px}
+.srow{display:flex;gap:8px}
+.srow input{flex:1;min-width:0;font:inherit;font-size:17px;padding:10px 12px;border:1px solid #bfb39a;background:#fff;color:var(--ink);border-radius:3px}
+.srow button{font-family:'IBM Plex Mono',monospace;font-size:13px;padding:0 14px;border:1px solid var(--void);background:var(--void);color:#F0D272;cursor:pointer;border-radius:3px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips button{font-family:'IBM Plex Mono',monospace;font-size:12px;padding:4px 9px;border:1px solid #c9bfa8;background:#fff;color:var(--soft);cursor:pointer;border-radius:14px}
+.chips button:hover{border-color:var(--gold);color:var(--ink)}
+#results{display:none}
+.rcount{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--soft);margin:14px 0 4px}
+.rgroup{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);padding:12px 18px 6px;margin:12px 0}
+.rgroup .where{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--gold-ink);text-transform:uppercase;margin-bottom:4px}
+.rgroup .where a{color:var(--gold-ink)}
+.rgroup ul{padding-left:20px;margin:6px 0 8px}.rgroup li{margin:5px 0}
+mark{background:#F0D272;color:var(--ink);padding:0 2px}
+</style>
 </head>
 <body>
-<div class="topbar"><span>Community Calendar · The Weber County Hive + Utah Hive Politics</span><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a></div>
-<div class="band"><header class="masthead"><div class="mhead"><svg class="mark" viewBox="0 0 120 120" aria-hidden="true"><polygon points="60,4 108.5,32 108.5,88 60,116 11.5,88 11.5,32" fill="none" stroke="#9FD8C4" stroke-opacity=".5" stroke-width="1.5"/><polygon points="60,16 98,38 98,82 60,104 22,82 22,38" fill="#0b1d2c" stroke="#9FD8C4" stroke-width="3"/><rect x="36" y="40" width="48" height="42" fill="#fff"/><rect x="36" y="40" width="48" height="11" fill="#1d6b57"/><rect x="44" y="35" width="4" height="10" fill="#9FD8C4"/><rect x="72" y="35" width="4" height="10" fill="#9FD8C4"/><polygon points="60,57 67,61 67,69 60,73 53,69 53,61" fill="#D9B868" stroke="#12304a" stroke-width="1.5"/></svg><div>
-  <div class="eyebrow">Dates worth knowing</div>
-  <h1 class="title">Community Calendar</h1></div></div>
-  <p class="dek">Election dates, deadlines and hearings from every Hive case file, plus community events sent in by neighbors. Save any date to your phone or share it with a tap.</p>
-  <div class="dates">Page published <span data-site="pagePublished"></span> · Last updated <span class="upd" data-site="pageUpdated"></span></div>
-</header></div>
-<section><p class="plain"><b>IN PLAIN WORDS</b>There are two kinds of calendars here. <strong>Utah Politics</strong> holds election dates, filing and referendum deadlines and public hearings, statewide and county by county; when a Hive case file has a deadline, it goes on this calendar too. <strong>Community Events</strong> holds festivals, fairs, fundraisers and other local happenings, starting with Weber County. Every date links to where it came from.</p>
-<div class="cards" id="maincards"></div>
-<h2 style="margin-top:28px;">County calendars</h2><div class="cards" id="countycards"></div></section>
-<section><h2>Coming up next</h2><div id="events"></div></section>
-<section id="submit"><div class="two">
-  <div class="box dark"><h3>Send us a date</h3><p style="margin:0;">Know of an election date, public hearing or community event others should know about?</p>
-  <a class="email" href="mailto:webercountyhive@gmail.com?subject=Calendar%20Event">webercountyhive@gmail.com</a>
-  <p style="margin:6px 0 0;font-size:15.5px;">Include the date, time, place and a link if there is one (a Facebook event, a flyer, a city or county notice). We check each date before it goes up, and we may write back to ask if you&rsquo;d like to tell us more.</p></div>
-  <div class="box"><h3>How this calendar works</h3><ul style="margin:0;padding-left:20px;font-size:16.5px;">
-  <li>Every date links to where it came from.</li>
-  <li>Dates from Hive case files link back to the case file.</li>
-  <li>Tap <strong>Add to my calendar</strong> to save a date to your phone, or <strong>Share</strong> to send it to a friend or post it on Facebook.</li>
-  <li>Dates marked <strong>Date not final</strong> may change. Check the source before you go.</li></ul></div>
-</div></section>
-<div class="toast" id="toast"></div>
-<footer class="site-footer"><div class="wrap">
-  <h3>Community Calendar</h3><p style="color:#9FD8C4;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;">From The Weber County Hive and Utah Hive Politics</p>
-  <p>Important dates for Utah voters and neighbors: elections, deadlines, public hearings and community events. Every date links to its source.</p>
-  <p>Send a date: <a href="mailto:webercountyhive@gmail.com?subject=Calendar%20Event">webercountyhive@gmail.com</a></p>
-  <div class="site-links"><a href="index.html">All calendars</a><a href="politics.html">Utah Politics</a><a href="community.html">Community Events</a><a href="weber.html">Weber</a><a href="davis.html">Davis</a><a href="box-elder.html">Box Elder</a><a href="morgan.html">Morgan</a><a href="wasatch.html">Wasatch</a><a href="salt-lake.html">Salt Lake</a><a href="utah-county.html">Utah County</a><a href="tooele.html">Tooele</a></div>
-  <p style="margin-top:6px;">Across the Hive:</p>
-  <div class="site-links"><a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive index</a><a href="https://weber-county-hive.github.io/sunday_buzz/">The Sunday Buzz</a><a href="https://weber-county-hive.github.io/Utah-Hive-News-Spotlights/">News Spotlights</a><a href="https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/">Letters &amp; Essays to the Collective</a><a href="https://weber-county-hive.github.io/candidates2026/">Candidates 2026</a><a href="https://weber-county-hive.github.io/Voter-Quick-Scan-2026/">Voter Quick Scan</a><a href="https://webercountyhive-coder.github.io/referendum/">Referendums</a><a href="https://weber-county-hive.github.io/utah-maps/">Utah Maps</a><a href="https://weber-county-hive.github.io/Transparency/">Transparency</a><a href="https://weber-county-hive.github.io/Bill-Tracker/">Bill Tracker</a><a href="https://weber-county-hive.github.io/pac/">PACs</a></div>
-</div></footer>
-<script src="events-data.js?v=1"></script>
-<script>window.CAL_MODE="hub";window.CAL_COUNTY="";window.CAL_FILE="";</script>
-<script src="calendar.js?v=1"></script>
+<div class="topbar"><span class="brand"><img src="sunday-buzz-logo.png" alt="">Utah Hive Politics · from the publisher of The Weber County Hive</span><span><a href="index.html">All issues</a> · <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a></span></div>
+<header class="masthead"><div class="mh"><img src="sunday-buzz-logo.png" alt="The Sunday Buzz seal: a bee reading the paper"><div><div class="eyebrow">Utah Hive Politics · The Weber County Hive</div><h1 class="title">The Sunday Buzz</h1><p class="dek">Every week in the hive, in one place.</p></div></div></header>
+<main>
+<div class="box"><b>Get the Buzz by email</b>The Sunday Buzz is emailed every Sunday to the Utah Hive Politics section of our Substack. <a href="https://webercountyhive.substack.com/subscribe" target="_blank" rel="noopener"><strong>Subscribe free</strong></a>, then make sure <strong>Utah Hive Politics</strong> is turned on. Already a subscriber? Turn on Utah Hive Politics in your Substack settings.</div>
+<div class="box"><b>What this is</b>Every Sunday we round up what was published and what was added to the Hive's case files that week, with links straight to each page, plus what's coming up. The five most recent weeks are shown in full below, each labeled by issue. Older weeks fold into the list at the bottom, and every issue keeps its own permanent page. Use the search box to find a name, district, city or topic in every issue at once.</div>
+<div class="searchbox"><label for="q">Search every issue</label>
+<div class="srow"><input id="q" type="search" placeholder="A name, district, city or topic, like HD-16, Roy, Stevenson or water" autocomplete="off"><button type="button" id="qclear">Clear</button></div>
+<div class="chips" id="chips"></div></div>
+<div id="results"></div>
+<div id="weeks">
+<h2 style="margin-top:28px;font-size:24px">The last five weeks</h2>
+<div id="recent"></div>
+<h2 class="older-h" id="older-h" hidden>Earlier issues</h2>
+<div id="older"></div>
+</div>
+<script src="buzz-data.js?v=5"></script>
+<script>
+(function(){
+var SHOW=5, cache={};
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function label(i){return '<div class="ilabel">ISSUE '+i.num+'<small>'+i.date+'</small></div>';}
+function card(i){return '<a class="issue" href="'+i.link+'"><img src="sunday-buzz-logo.png" alt=""><div><div class="num">Issue '+i.num+' · '+i.date+'</div><h3>'+i.title+'</h3><p>'+i.summary+'</p></div></a>';}
+function get(i){
+  if(!cache[i.link]) cache[i.link]=fetch(i.link,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(t){
+    var d=new DOMParser().parseFromString(t,'text/html');var m=d.querySelector('main');if(!m)throw 0;
+    var els=[].slice.call(m.querySelectorAll(':scope > .intro, :scope > section.blk'));
+    els.forEach(function(el){el.querySelectorAll('a[href^="#"]').forEach(function(a){a.setAttribute('href',i.link+a.getAttribute('href'));});});
+    return els;
+  });
+  return cache[i.link];
+}
+function fill(i,box){
+  get(i).then(function(els){box.innerHTML=els.map(function(e){return e.outerHTML;}).join('')+'<p class="weeknote"><a href="'+i.link+'">Open Issue '+i.num+' on its own page →</a></p>';})
+  .catch(function(){box.innerHTML='<p class="weeknote"><a href="'+i.link+'">Read Issue '+i.num+' →</a></p>';});
+}
+var rec=document.getElementById('recent'),old=document.getElementById('older');
+BUZZ_ISSUES.forEach(function(i,n){
+  if(n<SHOW){
+    var w=document.createElement('div');w.className='week';w.id='issue-'+i.num;
+    w.innerHTML=label(i)+card(i)+'<div class="week-body">Loading…</div>';
+    rec.appendChild(w);fill(i,w.querySelector('.week-body'));
+  }else{
+    document.getElementById('older-h').hidden=false;
+    var dt=document.createElement('details');dt.className='older';dt.id='issue-'+i.num;
+    dt.innerHTML='<summary><img src="sunday-buzz-logo.png" alt=""><div><div class="ilabel" style="font-size:14px;padding:4px 12px">ISSUE '+i.num+'<small>'+i.date+'</small></div><h3 style="font-family:Cinzel,serif;font-size:20px;margin:8px 0 4px">'+i.title+'</h3><p style="margin:0;color:var(--soft);font-size:15px">'+i.summary+'</p></div><span class="chev"><span class="o">Show ▾</span><span class="c">Hide ▴</span></span></summary><div class="week-body"></div>';
+    var done=false;dt.addEventListener('toggle',function(){if(dt.open&&!done){done=true;fill(i,dt.querySelector('.week-body'));}});
+    old.appendChild(dt);
+  }
+});
+/* search words: tags from buzz-data.js, most used first */
+var count={};BUZZ_ISSUES.forEach(function(i){(i.tags||[]).forEach(function(t){count[t]=(count[t]||0)+1;});});
+var tags=Object.keys(count).sort(function(a,b){return count[b]-count[a]||a.localeCompare(b);}).slice(0,24);
+var chips=document.getElementById('chips');
+chips.innerHTML=tags.map(function(t){return '<button type="button">'+esc(t)+'</button>';}).join('');
+chips.addEventListener('click',function(e){if(e.target.tagName==='BUTTON'){q.value=e.target.textContent;run();q.focus();}});
+var q=document.getElementById('q'),res=document.getElementById('results'),weeks=document.getElementById('weeks');
+function hl(node,term){
+  var w=document.createTreeWalker(node,NodeFilter.SHOW_TEXT,null),list=[],x;while(x=w.nextNode())list.push(x);
+  var re=new RegExp('('+term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig');
+  list.forEach(function(t){if(!re.test(t.nodeValue))return;re.lastIndex=0;var span=document.createElement('span');span.innerHTML=esc(t.nodeValue).replace(re,'<mark>$1</mark>');t.parentNode.replaceChild(span,t);});
+}
+var timer;
+function run(){
+  var term=q.value.trim();
+  if(term.length<2){res.style.display='none';weeks.style.display='';return;}
+  res.style.display='block';weeks.style.display='none';res.innerHTML='<p class="rcount">Searching…</p>';
+  var low=term.toLowerCase();
+  Promise.all(BUZZ_ISSUES.map(function(i){return get(i).then(function(els){return {i:i,els:els};},function(){return {i:i,els:[]};});})).then(function(all){
+    if(q.value.trim()!==term)return;
+    var html='',hits=0;
+    all.forEach(function(o){
+      var tagHit=(o.i.tags||[]).some(function(t){return t.toLowerCase().indexOf(low)>-1;});
+      o.els.forEach(function(el){
+        var h2=el.querySelector('h2');var box=h2?h2.textContent:'Introduction';
+        var items=[].slice.call(el.querySelectorAll('li, p')).filter(function(n){
+          if(n.tagName==='P'&&n.closest('li'))return false;
+          if(n.tagName==='LI'&&n.querySelector('li'))return false;
+          return n.textContent.toLowerCase().indexOf(low)>-1;});
+        if(el.classList.contains('intro')&&el.textContent.toLowerCase().indexOf(low)>-1)items=[el];
+        if(!items.length)return;
+        hits+=items.length;
+        var ul=document.createElement('ul');
+        items.forEach(function(n){var li=document.createElement('li');li.innerHTML=n.innerHTML;hl(li,term);ul.appendChild(li);});
+        html+='<div class="rgroup"><div class="where"><a href="'+o.i.link+'">Issue '+o.i.num+' · '+o.i.date+'</a> › '+esc(box)+'</div>'+ul.outerHTML+'</div>';
+      });
+      if(tagHit&&html.indexOf('Issue '+o.i.num+' ·')<0){hits++;html+='<div class="rgroup"><div class="where"><a href="'+o.i.link+'">Issue '+o.i.num+' · '+o.i.date+'</a></div><ul><li>'+esc(o.i.summary)+'</li></ul></div>';}
+    });
+    res.innerHTML='<p class="rcount">'+(hits?hits+' match'+(hits==1?'':'es')+' for “'+esc(term)+'”':'No matches for “'+esc(term)+'”. Try a shorter word, a last name or a district like HD-16.')+'</p>'+html;
+  });
+}
+q.addEventListener('input',function(){clearTimeout(timer);timer=setTimeout(run,200);});
+document.getElementById('qclear').addEventListener('click',function(){q.value='';run();q.focus();});
+var p=new URLSearchParams(location.search).get('q');if(p){q.value=p;run();}
+})();
+</script>
+</main>
+<footer><div class="w"><h3>The Sunday Buzz</h3><p>A weekly recap from Utah Hive Politics and The Weber County Hive. Public records only. Every claim links to its source.</p><div><a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">webercountyhive.substack.com</a> · <a href="https://github.com/Weber-County-Hive" target="_blank" rel="noopener">All Hive repos</a></div></div></footer>
 </body>
 </html>
