@@ -1,7 +1,7 @@
 # Community Calendar
 
 Important dates for Utah voters and neighbors, from The Weber County Hive and Utah Hive Politics.
-Live site (after GitHub Pages is turned on): https://weber-county-hive.github.io/Community-Calendar/
+Live site (after GitHub Pages is turned on): https://weber-county-hive.github.io/community-calendar/
 
 ## Pages
 - `index.html` — front page: links to every calendar and the next 8 dates

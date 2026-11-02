@@ -33,7 +33,7 @@ const SITE = {
   pagePublished: "Oct 4, 2026",
   pageUpdated: "Oct 31, 2026",
   email: "webercountyhive@gmail.com",
-  url: "https://weber-county-hive.github.io/Community-Calendar/"
+  url: "https://weber-county-hive.github.io/community-calendar/"
 };
 
 // The counties. To open a new county, add it here and copy weber.html to its file name
@@ -96,5 +96,5 @@ const EVENTS = [
   { id:"eagle-mountain-r62-referendum-vote", cal:"politics", county:"utah", type:"election", title:"Eagle Mountain tax referendum vote (tentative)", date:"2027-08-10", endDate:"", start:"", end:"", place:"Eagle Mountain", desc:"Special election on the referendum against Resolution R-62-2026, Eagle Mountain's 69.81% property tax rate increase. The date is printed on the city's referendum petition. Sponsors say Utah law appears to allow a tax measure only in November, so this date may change. The Hive is still researching.", link:"https://eaglemountain.gov/wp-content/uploads/2026/09/Eagle-Mountain-Referendum-Petition.pdf", linkLabel:"Eagle Mountain referendum petition", repo:"Referendums", caseFile:"https://webercountyhive-coder.github.io/referendum/eagle-mountain-tax-referendum-2.html", from:"hive", tentative:true, added:"2026-10-08" },
 
   // ===== COMMUNITY =====
-  { id:"sunset-agent-orange-memorial-unveiling", cal:"community", county:"davis", type:"memorial", title:"Agent Orange memorial unveiling (tentative)", date:"2026-11-11", endDate:"", start:"", end:"", place:"Sunset City Veterans Memorial Park, behind Sunset City Hall, Sunset", desc:"An unveiling of the memorial to Vietnam veterans exposed to Agent Orange is tentatively planned around Veterans Day. Date and time not yet confirmed.", link:"https://www.ksl.com/article/51626769/agent-orange-memorial-in-sunset-sought-by-syracuse-vietnam-war-veteran-largely-complete", linkLabel:"KSL", repo:"News Spotlights", caseFile:"https://weber-county-hive.github.io/Utah-Hive-News-Spotlights/sunset-agent-orange-memorial.html", from:"reader", tentative:true, added:"2026-10-04" }
+  { id:"sunset-agent-orange-memorial-unveiling", cal:"community", county:"davis", type:"memorial", title:"Agent Orange memorial unveiling (tentative)", date:"2026-11-11", endDate:"", start:"", end:"", place:"Sunset City Veterans Memorial Park, behind Sunset City Hall, Sunset", desc:"An unveiling of the memorial to Vietnam veterans exposed to Agent Orange is tentatively planned around Veterans Day. Date and time not yet confirmed.", link:"https://www.ksl.com/article/51626769/agent-orange-memorial-in-sunset-sought-by-syracuse-vietnam-war-veteran-largely-complete", linkLabel:"KSL", repo:"News Spotlights", caseFile:"https://weber-county-hive.github.io/Utah-hive-news-spotlights/sunset-agent-orange-memorial.html", from:"reader", tentative:true, added:"2026-10-04" }
 ];
